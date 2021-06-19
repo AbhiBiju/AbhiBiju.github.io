@@ -24,16 +24,16 @@
 
   <body>
     <header class="navContainer">
-        <h1>Hello I Am Abhi</h1>
-        <nav>
-          <ul>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contacts</a></li>
-              <!-- TODO: ADD RESUME WHEN COMPLETE -->
-            <li><a href="https://abhibiju.github.io/MyPortfolio/files/resume.pdf">Resume</a></li>
-          </ul>
-        </nav>
+      <h1>Hello I Am Abhi</h1>
+      <nav>
+        <ul>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contacts</a></li>
+          <!-- TODO: ADD RESUME WHEN COMPLETE -->
+          <li><a href="https://abhibiju.github.io/MyPortfolio/files/resume.pdf">Resume</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -60,10 +60,14 @@
         <div class="contactContainer">
           <!-- TODO: Add php or other data file for form output -->
           <form action="">
-            <label for=""></label>
-            <input type="text" name="userName" id="" />
-            <label for=""></label>
-            <label for=""></label>
+            <label for="userName">Enter Your Name:</label>
+            <input type="text" name="userName" id="userName" placeholder="userName" />
+            <label for="Email">Enter Your Email:</label>
+            <input type="email" name="Email" id="Email" placeholder="Email" />
+            <label for="Message"></label>
+            <input type="text" name="Message" id="Message" placeholder="Message" />
+
+            <input type="submit" value="" />
           </form>
           <ul>
             <li></li>
@@ -96,8 +100,6 @@
       </ul>
     </aside>
 
-    <footer>
-      &COPY;
-    </footer>
+    <footer>&COPY;</footer>
   </body>
 </html>
