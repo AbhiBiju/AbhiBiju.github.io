@@ -17,13 +17,17 @@
 
     <!-- Links/Scripts -->
     <link rel="stylesheet" href="assets/style.css" />
+    <!-- <link rel="shortcut icon" href="/assets/images/icons/animateDev.gif" type="image/x-icon" /> -->
+    <!-- <link rel="shortcut icon" href="/assets/images/icons/Bee.svg" type="image/x-icon" /> -->
+    <link rel="shortcut icon" href="/assets/images/icons/Bee2.svg" type="image/x-icon" />
 
     <!-- Title -->
-    <title>Abhinav Biju</title>
+    <title>AbhiBiju</title>
   </head>
 
   <body>
     <header class="navContainer">
+      <img class="svg-icons" src="/assets/images/icons/Tech.svg" alt="developer gif" />
       <h1>Hello I Am Abhi</h1>
       <nav>
         <ul>
@@ -31,7 +35,7 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contacts</a></li>
           <!-- TODO: ADD RESUME WHEN COMPLETE -->
-          <li><a href="https://abhibiju.github.io/MyPortfolio/files/resume.pdf">Resume</a></li>
+          <li><a href="/files/resume.pdf">Resume</a></li>
         </ul>
       </nav>
     </header>
@@ -58,14 +62,20 @@
       <!-- Contact -->
       <section id="contact">
         <div class="contactContainer">
+          <h3>Contact Me:</h3>
           <!-- TODO: Add php or other data file for form output -->
           <form action="">
             <label for="userName">Enter Your Name:</label>
-            <input type="text" name="userName" id="userName" placeholder="userName" />
+            <input type="text" name="userName" id="userName" placeholder="John Doe" />
             <label for="Email">Enter Your Email:</label>
-            <input type="email" name="Email" id="Email" placeholder="Email" />
-            <label for="Message"></label>
-            <input type="text" name="Message" id="Message" placeholder="Message" />
+            <input type="email" name="Email" id="Email" placeholder="email@address.com" />
+            <label for="Message">Enter Your Message:</label>
+            <textarea
+              type="text"
+              name="Message"
+              id="Message"
+              placeholder="Hey, I love your hair, lookin spiffy"
+            ></textarea>
 
             <input type="submit" value="" />
           </form>
