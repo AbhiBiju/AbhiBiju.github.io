@@ -283,8 +283,12 @@ img {
   padding: 4rem 1rem;
 }
 #mainProject {
-  width: 100%;
+  width: 80%;
   max-width: 715px;
+}
+.mainProjectContainer {
+  display: flex;
+  justify-content: center;
 }
 #mainProject .project-links {
   display: flex;
@@ -330,7 +334,7 @@ img {
   border-radius: 1rem;
   padding: 0.5rem;
   width: 50%;
-  transition: 0.1s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 #contact form > input[type="submit"]:hover {
   background-color: var(--primary-color-alt);
