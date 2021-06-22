@@ -16,46 +16,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Links/Scripts -->
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="shortcut icon" href="./assets/images/icons/Bee.svg" type="image/x-icon" />
     <!-- <link rel="shortcut icon" href="/assets/images/icons/animateDev.gif" type="image/x-icon" /> -->
     <!-- <link rel="shortcut icon" href="/assets/images/icons/Bee.svg" type="image/x-icon" /> -->
-    <link rel="shortcut icon" href="/assets/images/icons/Bee2.svg" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/d831f70b1e.js" crossorigin="anonymous"></script>
 
     <!-- Title -->
     <title>AbhiBiju</title>
   </head>
 
   <body>
-    <header class="navContainer">
-      <a href="/"
-        ><img class="svg-icons" id="devGif" src="/assets/images/icons/animateDev-unscreen.gif" alt="developer gif"
-      /></a>
-      <nav>
-        <ul class="Menu">
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contacts</a></li>
-          <!-- TODO: ADD RESUME WHEN COMPLETE -->
-          <li><a href="/files/resume.pdf">Resume</a></li>
-        </ul>
+    <header class="header" id="header">
+      <nav class="nav container">
+        <!-- TODO: Add Better Logo Icon -->
+        <a href="/" class="logo"><i class="fas fa-circle-notch"></i>Abhi</a>
+        <!-- <h1>Welcome To My Portfolio</h1> -->
+        <div class="navMenu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="#about-me"> <i class="fas fa-address-card"></i>About Me </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects"> <i class="fas fa-laptop-code"></i>Projects </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"> <i class="far fa-comments"></i>Contact </a>
+            </li>
+            <!-- TODO: ADD RESUME WHEN COMPLETE -->
+            <li class="nav-item">
+              <a class="nav-link" href="./files/resume.pdf"> <i class="far fa-file-pdf"></i>Resume </a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
     <main>
       <!-- Hero Section-->
-      <div id="hero">
-        <video
-          src="/assets/images/stock/Bg-Rain.mp4"
-          autoplay
-          loop
-          poster="/assets/images/stock/Poster-Rain.png"
-        ></video>
+      <div class="hero">
+        <a id="scrollBtn" href="#about-me">
+          <i class="fas fa-chevron-down"></i>
+        </a>
       </div>
 
       <!-- About Me Section -->
       <section id="about-me">
-        <img class="svg-icons" src="/assets/images/icons/Bee.svg" alt="Bee icon" />
-        <h2>About Me</h2>
+        <div class="about-me-title">
+          <h2>About Me:</h2>
+          <h3>My Name is Abhinav Biju</h3>
+          <!-- <img src="./assets/images/icons/Bee.svg" alt="Bee icon" /> -->
+        </div>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit asperiores laboriosam et corrupti repellendus
           id libero suscipit nihil. Velit nisi deleniti dolorem atque praesentium? Nesciunt quam numquam corrupti quae
@@ -67,44 +78,58 @@
       <!-- Projects -->
       <section id="projects">
         <h2>Projects</h2>
-        <ul id="projectsList">
-          <li id="mainProject">
-            <h3>Project 1</h3>
-            <img src="" alt="" />
-            <a href="">Deployed Site</a>
-            <a href="">Live Code</a>
-          </li>
-          <li>
-            <h3>Project 2</h3>
-            <img src="" alt="" />
-            <a href="">Deployed Site</a>
-            <a href="">Live Code</a>
-          </li>
-          <li>
-            <h3>Project 3</h3>
-            <img src="" alt="" />
-            <a href="">Deployed Site</a>
-            <a href="">Live Code</a>
-          </li>
-          <li>
-            <h3>Project 4</h3>
-            <img src="" alt="" />
-            <a href="">Deployed Site</a>
-            <a href="">Live Code</a>
-          </li>
-          <li>
-            <h3>Project 5</h3>
-            <img src="" alt="" />
-            <a href="">Deployed Site</a>
-            <a href="">Live Code</a>
-          </li>
+        <ul class="project-list">
+          <div class="mainProjectContainer">
+            <li id="mainProject">
+              <h3>Project 1</h3>
+              <img src="/assets/images/stock/placeholder-image.png" alt="Placeholder Image" />
+              <div class="project-links">
+                <a href="">Deployed Site</a>
+                <a href="">Live Code</a>
+              </div>
+            </li>
+          </div>
+          <div class="otherProjects">
+            <li>
+              <h3>Project 2</h3>
+              <img src="/assets/images/stock/placeholder-image.png" alt="Placeholder Image" />
+              <div class="project-links">
+                <a href="">Deployed Site</a>
+                <a href="">Live Code</a>
+              </div>
+            </li>
+            <li>
+              <h3>Project 3</h3>
+              <img src="/assets/images/stock/placeholder-image.png" alt="Placeholder Image" />
+              <div class="project-links">
+                <a href="">Deployed Site</a>
+                <a href="">Live Code</a>
+              </div>
+            </li>
+            <li>
+              <h3>Project 4</h3>
+              <img src="/assets/images/stock/placeholder-image.png" alt="Placeholder Image" />
+              <div class="project-links">
+                <a href="">Deployed Site</a>
+                <a href="">Live Code</a>
+              </div>
+            </li>
+            <li>
+              <h3>Project 5</h3>
+              <img src="/assets/images/stock/placeholder-image.png" alt="Placeholder Image" />
+              <div class="project-links">
+                <a href="">Deployed Site</a>
+                <a href="">Live Code</a>
+              </div>
+            </li>
+          </div>
         </ul>
       </section>
 
       <!-- Contact -->
       <section id="contact">
-        <div class="contactContainer">
-          <h3>Contact Me:</h3>
+        <div class="contact-form">
+          <h2>Contact Me:</h2>
           <!-- TODO: Add php or other data file for form output -->
           <form action="">
             <label for="userName">Enter Your Name:</label>
@@ -121,33 +146,30 @@
 
             <input type="submit" value="Submit" />
           </form>
-          <ul>
-            <li>hi</li>
-            <li>hello</li>
-          </ul>
         </div>
+        <ul class="myInfo">
+          <h3>My Contacts:</h3>
+          <li>Number: (305) - 587 - 7032</li>
+          <li>Email: abhinavbiju29@gmail.com</li>
+          <li>Github: <a href="https://github.com/AbhiBiju/" target="_blank">github.com/AbhiBiju</a></li>
+        </ul>
       </section>
     </main>
 
-    <aside class="socialsContainer">
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
       <!-- TODO: Add JS script so icons only visible on ScrollDown -->
-      <ul class="socials">
+      <ul>
         <!-- TODO: Find and add another social media here -->
-        <!-- <li><a href=""><img class="svg-icons" src="/assets/images/icons" alt="" /></a></li> -->
+        <!-- <li><a href=""><img src="/assets/images/icons/" alt="" /></a></li> -->
         <li>
-          <a href="mailto:abhinavbiju29@gmail.com">
-            <img class="svg-icons" src="/assets/images/icons/Email.svg" alt="Email Icon" />
-          </a>
+          <a href="mailto:abhinavbiju29@gmail.com"> <i class="fas fa-envelope"></i></a>
         </li>
         <li>
-          <a href="https://github.com/AbhiBiju/" target="_blank">
-            <img class="svg-icons" src="/assets/images/icons/Github.svg" alt="Github Icon"
-          /></a>
+          <a href="https://github.com/AbhiBiju/" target="_blank"> <i class="fab fa-github"></i></a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/abhinavbiju/" target="_blank">
-            <img class="svg-icons" src="/assets/images/icons/LinkedIn.svg" alt="LinkedIn Icon"
-          /></a>
+          <a href="https://www.linkedin.com/in/abhinavbiju/" target="_blank"> <i class="fab fa-linkedin"></i></a>
         </li>
       </ul>
     </aside>
