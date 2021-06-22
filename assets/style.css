@@ -294,11 +294,21 @@ img {
   display: flex;
   padding: 0.5rem;
   justify-content: space-evenly;
+  border: 1px solid var(--primary-color-lighter);
+}
+#mainProject .project-links > * {
+  border: 1px dotted var(--primary-color-lighter);
+  padding: 0.5rem 5rem;
 }
 .otherProjects:not(#mainProject) .project-links {
   display: flex;
   padding: 0.5rem;
   justify-content: space-between;
+  border: 1px solid var(--primary-color-lighter);
+}
+.otherProjects:not(#mainProject) .project-links > * {
+  border: 1px dotted var(--primary-color-lighter);
+  padding: 0 2rem;
 }
 
 /* Contact Styles */
@@ -343,7 +353,13 @@ img {
 #contact h2 {
   padding-left: 4rem;
 }
-
+.myInfo {
+  display: flex;
+  flex-flow: column wrap;
+}
+.myInfo > * {
+  padding: 0.5rem;
+}
 /* Footer Styles */
 
 /* ====Media Queries==== */
