@@ -318,13 +318,30 @@ img {
   flex-flow: column wrap;
   padding-left: 4rem;
 }
+#contact form > * {
+  padding: 0.25rem 0;
+  color: var(--text-color);
+}
+#contact form > input[type="submit"] {
+  margin-top: 1rem;
+  background-color: var(--primary-color-lighter);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  width: 50%;
+  transition: 0.1s ease-in-out;
+}
+#contact form > input[type="submit"]:hover {
+  background-color: var(--primary-color-alt);
+  border: 1px solid var(--title-color);
+}
 #contact h2 {
   padding-left: 4rem;
 }
 
 /* Footer Styles */
 
-/* Media Queries */
+/* ====Media Queries==== */
 
 /* Small Phones */
 @media screen and (max-width: 767px) {
