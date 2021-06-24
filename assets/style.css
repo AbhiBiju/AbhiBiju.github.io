@@ -305,6 +305,7 @@ img {
 .project-list img {
   transition: 0.3s ease-in-out;
 }
+/* TODO: Add Desc on hover */
 .project-list img:hover {
   opacity: 0.5;
 }
