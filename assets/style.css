@@ -3,11 +3,11 @@
 /* Root Styles */
 :root {
   --header-height: 6rem;
-  /* Widths */
 
   /* Colors */
   --hue-color: 250;
-  /* Red:0-30,350-360 
+  /* =====Hues===== */
+  /* Red:0-30,350-360
      Orange:30-50 
      Yellow:50-80 
      Green:80-120-160 
@@ -17,29 +17,27 @@
      Violet:260-290 
      Pink:290-350 */
 
-  --primary-color: hsl(var(--hue-color), 69%, 61%); /* sat:0=grey 100=color */
-  --primary-color-second: hsl(var(--hue-color), 69%, 61%); /* light: 0=black 100=white */
-  --primary-color-alt: hsl(var(--hue-color), 57%, 53%);
-  --primary-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  /* sat:0=grey 100=color */
+  /* light: 0=black 100=white */
 
-  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --primary-color: hsl(var(--hue-color), 69%, 61%);
+  --primary-color-light: hsl(var(--hue-color), 92%, 85%);
+  --secondary-color: hsl(var(--hue-color), 57%, 53%);
+
   --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
-  --body-color: hsl(var(--hue-color), 60%, 99%);
-  --container-color: #fff;
+  --dark-color: hsl(var(--hue-color), 8%, 15%);
+  --light-color: hsl(var(--hue-color), 60%, 99%);
 
   /* Fonts */
   --body-font: "Poppins", sans-serif;
 
   /* Font Sizes (0.5rem = 8px, 1rem = 16px, 1.5rem = 24px) */
-  --big-font-size: 2rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1.125rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
-  --smaller-font-size: 0.75rem;
+  --font-size-200: 2rem;
+  --font-size-150: 1.5rem;
+  --font-size-100: 1.25rem;
+  --font-size-75: 0.938rem;
+  --font-size-60: 0.813rem;
+  --font-size-50: 0.75rem;
 
   /* Font Weight */
   --font-medium: 500;
@@ -51,20 +49,19 @@
 /* Root Styles for Larger Screens */
 @media screen and (min-width: 968px) {
   :root {
-    --big-font-size: 3rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
-    --smaller-font-size: 0.813rem;
+    --font-size-200: 3rem;
+    --font-size-150: 2.25rem;
+    --font-size-100: 1.5rem;
+    --font-size-75: 1rem;
+    --font-size-60: 0.875rem;
+    --font-size-50: 0.813rem;
   }
 }
 /* Styles For Smaller Screens */
 @media screen and (max-width: 421px) {
   :root {
-    --h2-font-size: 0.7rem;
-    --rem-3: 2rem;
+    --font-size-100: 0.7rem;
+    --nav-gap: 2rem;
   }
 }
 
@@ -80,15 +77,15 @@ html {
 body {
   margin: 0 0 var(--header-height) 0;
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  font-size: var(--font-size-75);
+  background-color: var(--light-color);
   color: var(--text-color);
 }
 h1,
 h2,
 h3,
 h4 {
-  color: var(--title-color);
+  color: var(--primary-color);
   font-weight: var(--font-semi-bold);
 }
 ul {
@@ -109,20 +106,20 @@ img {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: var(--body-color);
+  background-color: var(--light-color);
 }
 .logo {
-  font-size: var(--h1-font-size);
+  font-size: var(--font-size-200);
 }
 .nav {
-  max-width: 90%;
+  max-width: 100%;
   height: var(--header-height);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .nav-list {
-  font-size: var(--h2-font-size);
+  font-size: var(--font-size-100);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -135,7 +132,7 @@ img {
   transition: 0.3s ease-in-out;
 }
 .nav-link:hover {
-  color: var(--primary-color-lighter);
+  color: var(--primary-color-light);
 }
 
 /* Hero Styles */
@@ -162,12 +159,12 @@ img {
   background-color: var(--primary-color);
   opacity: 0.8;
   /* top: 15%; */
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
+  font-size: var(--font-size-150);
+  color: var(--dark-color);
   transition: background-color 1s ease-in-out;
 }
 #scrollBtn:hover {
-  background-color: var(--body-color);
+  background-color: var(--light-color);
 }
 
 /* Sidebar Styles */
@@ -180,7 +177,7 @@ img {
   bottom: 10rem;
   margin-right: 0;
   width: fit-content;
-  font-size: var(--big-font-size);
+  font-size: var(--font-size-200);
 }
 .sidebar li {
   width: 150px;
@@ -195,12 +192,12 @@ img {
   transform: translateX(-80px);
 }
 .sidebar i {
-  color: var(--primary-color-alt);
+  color: var(--secondary-color);
   pointer-events: all;
   transition: 0.3s ease-in-out;
 }
 .sidebar i:hover {
-  color: var(--primary-color-lighter);
+  color: var(--primary-color-light);
 }
 /* Fun Icon Moving Animation */
 @keyframes hoverIcon {
@@ -228,19 +225,19 @@ img {
 }
 #about-me p {
   width: 48rem;
-  padding: 1rem 0;
-  font-size: var(--h2-font-size);
+  padding: 1rem;
+  font-size: var(--font-size-100);
 }
 #about-me h2,
 #about-me h3 {
-  color: var(--primary-color-alt);
+  color: var(--secondary-color);
 }
 .about-me-title {
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: center;
-  font-size: var(--h2-font-size);
+  font-size: var(--font-size-100);
   color: var(--primary-color);
 }
 .about-me-title:after {
@@ -248,76 +245,59 @@ img {
   width: 100%;
   height: 10px;
   text-align: left;
-  position: relative;
+  position: static;
   background-color: var(--primary-color);
   margin: 1px solid var(--primary-color);
 }
+.about-me-title img {
+  width: 50%;
+}
+
 /* Projects Styles */
 #projects {
   display: flex;
   flex-flow: column wrap;
   text-align: center;
   padding-top: 4rem;
+  align-items: center;
 }
-#projects h2 {
-  font-size: var(--h1-font-size);
-  padding: 2rem 0;
+#projects h2,
+h3 {
+  font-size: var(--font-size-150);
+  padding: 2rem 0 1rem 0;
 }
 .project-list {
   display: flex;
-  flex-flow: column wrap;
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
-  vertical-align: middle;
-}
-.otherProjects {
-  display: flex;
   flex-flow: row wrap;
-  width: 60%;
-  padding: 2rem 4rem;
-}
-#projects li:not(#mainProject) {
-  width: 50%;
-  /* max-width: calc(100% / 4); */
-  padding: 1rem 1rem;
-}
-#mainProject {
-  width: 80%;
-  max-width: 44.6rem;
-}
-.mainProjectContainer {
-  display: flex;
+  width: 100%;
   justify-content: center;
 }
-#mainProject .project-links {
-  display: flex;
-  padding: 0.5rem;
-  justify-content: space-evenly;
-  border: 1px solid var(--primary-color-lighter);
+.project-list li {
+  flex: 1 1 50%;
+  text-align: center;
+  padding: 1rem 4rem;
 }
-#mainProject .project-links > * {
-  border: 1px dotted var(--primary-color-lighter);
+.project-list li:first-child {
+  flex: 1 1 70%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  padding: 0 5rem;
+  margin: 0 1rem;
+}
+.project-list a {
+  border: 1px solid var(--primary-color-light);
+  padding: 0.5rem;
+  width: 100%;
+  transition: 0.3s;
+}
+.project-list li:not(li:first-child) a {
   padding: 0.5rem 3rem;
 }
-.otherProjects:not(#mainProject) .project-links {
-  display: flex;
-  padding: 0.5rem;
-  justify-content: space-between;
-  border: 1px solid var(--primary-color-lighter);
-}
-.otherProjects:not(#mainProject) .project-links > * {
-  border: 1px dotted var(--primary-color-lighter);
-  padding: 0.5rem 2rem;
-  transition: 0.3s eas;
-}
-#mainProject .project-links > *:hover {
+.project-list a:hover {
+  border: 1px solid transparent;
   color: var(--title-color);
-  background-color: var(--primary-color-lighter);
-}
-.otherProjects:not(#mainProject) .project-links > *:hover {
-  color: var(--title-color);
-  background-color: var(--primary-color-lighter);
+  background-color: var(--primary-color-light);
 }
 
 /* Contact Styles */
@@ -326,29 +306,27 @@ img {
   flex-flow: row wrap;
   padding-top: 3rem;
 }
-#contact > * {
-  width: 50%;
-  padding: 2rem;
-}
-.contact-form {
-  display: flex;
-  flex-flow: row wrap;
+#contact {
   width: 100%;
-  padding-left: 2rem;
+  padding: 4rem 2rem 2rem 0rem;
+}
+.contact-container {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 1 50%;
 }
 #contact form {
   display: flex;
   flex-flow: column wrap;
-  padding-left: 1rem;
   width: inherit;
 }
 #contact form > * {
-  padding: 0.25rem 0;
+  padding: 0.25rem;
   color: var(--text-color);
 }
 #contact form > input[type="submit"] {
   margin-top: 1rem;
-  background-color: var(--primary-color-lighter);
+  background-color: var(--primary-color-light);
   border: 1px solid transparent;
   border-radius: 1rem;
   padding: 0.5rem;
@@ -356,24 +334,74 @@ img {
   transition: 0.2s ease-in-out;
 }
 #contact form > input[type="submit"]:hover {
-  background-color: var(--primary-color-alt);
-  border: 1px solid var(--title-color);
-}
-#contact h2 {
-  padding-left: 4rem;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--dark-color);
 }
 .myInfo {
   display: flex;
   flex-flow: column wrap;
-}
-.myInfo > * {
-  padding: 0.5rem 0rem 0rem 4rem;
+  flex: 1 1 50%;
+  padding: 0.5rem 1rem;
 }
 /* Footer Styles */
 
 /* ====Media Queries==== */
 
-/* Tablets/ Large Phones */
+/* Larger Screens */
+@media screen and (min-width: 2500px) {
+  :root {
+    --font-size-75: 2rem;
+    --font-size-100: 2.25rem --font-size-;
+  }
+  #contact {
+    padding: 6rem 4rem 12rem 6rem;
+  }
+  .project-list li:not(li:first-child) a {
+    padding: 1rem 3.17rem;
+    display: flow-root;
+    margin: auto;
+    width: 62%;
+  }
+  .project-list li:first-child a {
+    margin: auto;
+    width: 100%;
+    padding: 2rem 3.17rem;
+  }
+  .project-list li:first-child {
+    padding: 0 41rem;
+  }
+  .project-list li:first-child img {
+    height: 45rem;
+  }
+}
+
+/* Laptop Screens */
+@media screen and (min-width: 1024px) and (max-width: 2500px) {
+  #contact {
+    padding: 4rem 4rem 12rem 4rem;
+  }
+  .project-list li:not(li:first-child) a {
+    padding: 1rem 3.17rem;
+    display: flow-root;
+    margin: auto;
+    width: 100%;
+  }
+  .project-list li:first-child a {
+    margin: auto;
+    width: 63%;
+    padding: 2rem 3.17rem;
+  }
+  .project-list li:first-child {
+    padding: 0 4rem;
+  }
+  .project-list li:first-child img {
+    height: 25rem;
+    width: 63%;
+    align-self: center;
+  }
+}
+
+/* Tablets and Large Phones */
 @media screen and (max-width: 767px) {
   .nav {
     justify-content: center;
@@ -383,8 +411,8 @@ img {
     bottom: 0;
     left: 0;
     width: 100%;
-    font-size: var(--small-font-size);
-    background-color: var(--body-color);
+    font-size: var(--font-size-60);
+    background-color: var(--light-color);
     padding: 2rem 1.5rem 3rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1.5rem 1.5rem 0 0;
@@ -398,44 +426,55 @@ img {
   }
 }
 
+/* Padding fix */
+@media screen and (max-width: 1000px) and (min-width: 425px) {
+  .project-list li:not(li:first-child) a {
+    padding: 0.5rem 1.35rem;
+    display: flow-root;
+    margin: 0rem 0rem;
+  }
+  #about-me p {
+    width: 48rem;
+    padding: 2rem;
+  }
+  #contact {
+    width: 100%;
+    padding: 6rem;
+  }
+}
+
 /* Small Phones */
 @media screen and (max-width: 425px) {
-  /* .mainProjectContainer,
-  .project-list {
-    width: fit-content;
-  } */
   .navMenu {
-    font-size: var(--smaller-font-size);
+    font-size: var(--font-size-100);
   }
-  .otherProjects {
-    width: 20rem;
+  .project-list li {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+  }
+  .project-list li:first-child {
     padding: 0;
-    justify-content: center;
+    margin: 2rem;
+    flex-flow: column wrap;
+    justify-content: space-around;
   }
-  .otherProjects:not(#mainProject) .project-links > * {
-    font-size: var(--smaller-font-size);
-    padding: 0;
+  #contact {
+    width: 100%;
+    padding: 6rem 3rem 3rem 3rem;
   }
-  #mainProject .project-links > * {
-    padding: 0.5rem 2rem;
+  .myInfo {
+    padding-top: 1.5rem;
   }
   .myInfo > * {
-    padding: 0.5rem 0rem 0rem 2rem;
-  }
-  #projects li:not(#mainProject) {
-    width: 40%;
-    /* max-width: calc(100% / 4); */
-    padding: 0.1rem 0.3rem;
-  }
-  #contact > * {
-    width: 100%;
-    padding: 3rem;
+    padding: 0.2rem 0rem;
   }
   .sidebar li {
-    transform: translateX(-120px);
-    font-size: var(--h1-font-size);
+    transform: translateX(-110px);
+    font-size: var(--font-size-200);
   }
   .sidebar li:hover {
-    transform: translateX(-110px);
+    transform: translateX(-100px);
   }
 }
