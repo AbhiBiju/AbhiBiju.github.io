@@ -261,9 +261,12 @@ img {
   padding-top: 4rem;
   align-items: center;
 }
-#projects h2,
-h3 {
+#projects h2 {
   font-size: var(--font-size-150);
+  padding: 2rem 0 1rem 0;
+}
+#projects h3 {
+  font-size: var(--font-size-100);
   padding: 2rem 0 1rem 0;
 }
 .project-list {
@@ -298,6 +301,12 @@ h3 {
   border: 1px solid transparent;
   color: var(--title-color);
   background-color: var(--primary-color-light);
+}
+.project-list img {
+  transition: 0.3s ease-in-out;
+}
+.project-list img:hover {
+  opacity: 0.5;
 }
 
 /* Contact Styles */
