@@ -60,7 +60,7 @@
 /* Styles For Smaller Screens */
 @media screen and (max-width: 421px) {
   :root {
-    --font-size-100: 0.7rem;
+    --font-size-100: 1rem;
     --nav-gap: 2rem;
   }
 }
