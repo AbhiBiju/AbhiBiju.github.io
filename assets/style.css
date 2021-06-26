@@ -388,7 +388,7 @@ img {
 /* Laptop Screens */
 @media screen and (min-width: 1024px) and (max-width: 2500px) {
   #contact {
-    padding: 4rem 4rem 12rem 4rem;
+    padding: 10rem 4rem 0rem 4rem;
   }
   .project-list li:not(li:first-child) a {
     padding: 1rem 3.17rem;
