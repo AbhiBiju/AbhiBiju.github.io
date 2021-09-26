@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Links/Scripts -->
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="shortcut icon" href="./assets/images/icons/Bee.svg" type="image/x-icon" />
     <!-- <link rel="shortcut icon" href="/assets/images/icons/animateDev.gif" type="image/x-icon" /> -->
     <!-- <link rel="shortcut icon" href="/assets/images/icons/Bee.svg" type="image/x-icon" /> -->
@@ -34,9 +34,8 @@
         <!-- <h1>Welcome To My Portfolio</h1> -->
         <div class="navMenu" id="nav-menu">
           <ul class="nav-list">
-            <!-- TODO: ADD RESUME WHEN COMPLETE -->
             <li class="nav-item">
-              <a class="nav-link" href="./files/ResumePlaceholder.pdf" download>
+              <a class="nav-link" href="./files/Abhi_Biju_Resume.pdf" target="blank">
                 <i class="far fa-file-pdf"></i>Resume
               </a>
             </li>
@@ -83,22 +82,22 @@
         <h2>Projects</h2>
         <ul class="project-list">
           <li>
-            <h3>Run Buddy</h3>
-            <img src="./assets/images/stock/hero-bg.jpeg" alt="Run Buddy Background Image" />
-            <a href="https://abhibiju.github.io/run-buddy/">Deployed Site</a>
-            <a href="https://github.com/AbhiBiju/run-buddy">Live Code</a>
+            <h3>Project 1: Cuckoos Library Book Search App</h3>
+            <img src="./assets/images/stock/CuckoosLibrary.png" alt="CuckoosLibrary Image" />
+            <a href="https://cuckoos-library.netlify.app/">Deployed Site</a>
+            <a href="https://github.com/AbhiBiju/Cuckoos-Library">Live Code</a>
           </li>
           <li>
-            <h3>Project 2</h3>
-            <img src="./assets/images/stock/placeholder-image.png" alt="Placeholder Image" />
-            <a href="">Deployed Site</a>
-            <a href="">Live Code</a>
+            <h3>Project 2: BookMe Social App</h3>
+            <img src="./assets/images/stock/BookMe.png" alt="BookMe Image" />
+            <a href="https://book-me-site.herokuapp.com/">Deployed Site</a>
+            <a href="https://github.com/AbhiBiju/um-project-2">Live Code</a>
           </li>
           <li>
-            <h3>Project 3</h3>
-            <img src="./assets/images/stock/placeholder-image.png" alt="Placeholder Image" />
-            <a href="">Deployed Site</a>
-            <a href="">Live Code</a>
+            <h3>Project 3: Weather Dashboard</h3>
+            <img src="./assets/images/stock/WDS.png" alt="Weather Dashboard Image" />
+            <a href="https://abhibiju.github.io/Weather-Dashboard/">Deployed Site</a>
+            <a href="https://github.com/AbhiBiju/Weather-Dashboard">Live Code</a>
           </li>
           <li>
             <h3>Project 4</h3>
@@ -148,7 +147,7 @@
     <!-- Sidebar Section -->
     <aside class="sidebar">
       <!-- TODO: Add JS script so icons only visible on ScrollDown -->
-      <ul>
+      <ul id="socialsList">
         <!-- TODO: Find and add another social media here -->
         <!-- <li><a href=""><img src="/assets/images/icons/" alt="" /></a></li> -->
         <li>
@@ -164,5 +163,15 @@
     </aside>
 
     <!-- <footer>&COPY;</footer> -->
+    <script>
+      setInterval(() => {
+        let hue = Math.random() * 361;
+        document.documentElement.style.setProperty("--hue-color", hue);
+        document.body.querySelectorAll('img[alt="Placeholder Image"]').forEach((img) => {
+          img.style.filter = `hue-rotate(${hue + 120}deg)`;
+        });
+        document.documentElement.style.setProperty("transition", "10s");
+      }, 5000);
+    </script>
   </body>
 </html>
